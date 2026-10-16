@@ -4,6 +4,10 @@ Seora is a modern fashion e-commerce storefront prototype. It demonstrates the s
 
 The interface is designed around an editorial retail aesthetic: an announcement bar, seasonal hero section, curated catalogue, product recommendations, brand storytelling, and newsletter sign-up.
 
+## Live demo
+
+Open the deployed storefront: **[priyankas3140.github.io/Demo-ecommerce-app](https://priyankas3140.github.io/Demo-ecommerce-app/)**
+
 ## What you can do
 
 ### Discover products
