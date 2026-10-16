@@ -1,20 +1,29 @@
-# Seora | E-commerce Storefront
+# Seora | E-commerce Storefront + NPD Hub
 
-Seora is a modern fashion e-commerce storefront prototype. It demonstrates the shopping journey from product discovery through checkout in a single responsive, frontend-only experience.
+Seora is a modern fashion e-commerce portfolio project with two connected experiences: a customer-facing storefront and an NPD (New Product Development) Hub for planning the products that reach the store.
 
 The interface is designed around an editorial retail aesthetic: an announcement bar, seasonal hero section, curated catalogue, product recommendations, brand storytelling, and newsletter sign-up.
 
 ## Live demo
 
-Open the deployed storefront: **[priyankas3140.github.io/Demo-ecommerce-app](https://priyankas3140.github.io/Demo-ecommerce-app/)**
+Open the deployed storefront: **[Storefront demo](https://priyankas3140.github.io/Demo-ecommerce-app/)**
 
-Open the product-development workspace: **[NPD Hub](https://priyankas3140.github.io/Demo-ecommerce-app/npd.html)**
+Open the product-development workspace: **[NPD Hub demo](https://priyankas3140.github.io/Demo-ecommerce-app/npd.html)**
 
 ## NPD Hub
 
 The project also includes an NPD (New Product Development) workspace for managing products before they reach the store. It has a product-idea portfolio, research library, development roadmap, launch-readiness centre, and quick metrics dashboard.
 
 Its data is stored in **IndexedDB**, the browser's built-in database. New product concepts, research findings, and roadmap tasks remain saved on the device after refresh, without requiring a server or account.
+
+### NPD Hub features
+
+- Dashboard for active concepts, validation scores, open tasks, and launch readiness.
+- Product-idea portfolio covering research, viability, prototype, and launch stages.
+- Research library for interviews, surveys, competitor insights, and market findings.
+- Kanban-style roadmap to assign and manage development tasks.
+- Launch-readiness centre for product, growth, operations, and customer-experience workstreams.
+- Add-new-entry dialogs that save ideas, research, and tasks directly to IndexedDB.
 
 ## What you can do
 
@@ -47,7 +56,9 @@ Its data is stored in **IndexedDB**, the browser's built-in database. New produc
 | --- | --- |
 | HTML5 | Page structure, product UI, forms, and modal content |
 | CSS3 | Responsive layout, typography, styling, transitions, cart drawer, and dialogs |
-| Vanilla JavaScript | Product data, filtering, search, wishlist, local cart, coupon logic, and checkout interactions |
+| Vanilla JavaScript | Product data, filtering, search, wishlist, local cart, NPD workflows, and IndexedDB persistence |
+| IndexedDB | Browser database for NPD concepts, findings, and roadmap tasks |
+| GitHub Pages | Live static-site deployment |
 
 No framework, package manager, build step, or backend is needed to run this demo.
 
@@ -64,6 +75,9 @@ Demo-ecommerce-app/
 |-- index.html   # Page markup, storefront sections, cart, account and checkout dialogs
 |-- style.css    # Desktop/mobile design system and interactive UI styles
 |-- app.js       # Product catalogue and all storefront interactions
+|-- npd.html     # New Product Development workspace
+|-- npd.css      # NPD Hub dashboard and responsive workspace styles
+|-- npd.js       # IndexedDB schema, seed data, NPD forms, metrics and workflows
 `-- README.md    # Project documentation
 ```
 
@@ -71,15 +85,16 @@ Demo-ecommerce-app/
 
 - The product catalogue is defined in the `products` array in `app.js`, making it easy to swap in an API later.
 - Cart contents use `localStorage` under the `seora-cart` key, so they remain available after refresh in the same browser.
+- NPD Hub data is stored in IndexedDB under the `seora-npd` database name.
 - Product images are loaded from Unsplash for demonstration purposes.
 - Checkout and sign-in are visual flows only; they do not process a real card or create a real account.
 
-## Production roadmap
+## Future production upgrades
 
 To turn Seora into a full e-commerce application, the next steps would be:
 
 1. Migrate the frontend to Next.js and TypeScript for reusable components, routing, and SEO.
-2. Add a database such as PostgreSQL for products, users, inventory, orders, and reviews.
+2. Replace browser-only storage with a shared database such as PostgreSQL for products, users, inventory, orders, reviews, and NPD collaboration.
 3. Integrate secure authentication (for example, Clerk, Auth0, or NextAuth).
 4. Use Stripe or Razorpay for live payments.
 5. Add an admin dashboard for product management, stock levels, fulfilment, and customer orders.
