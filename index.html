@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEORA — Everyday, elevated.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="announcement"><span>Complimentary shipping on orders over $75</span><span>Easy returns within 30 days</span><span>New season, now in</span></div>
+  <header>
+    <button class="mobile-menu" aria-label="Open menu">☰</button>
+    <a class="logo" href="#">SEORA<span>®</span></a>
+    <nav><a href="#shop">Shop</a><a href="#new">New arrivals</a><a href="#edit">The edit</a><a href="#about">About</a></nav>
+    <div class="header-actions">
+      <button class="icon-btn search-toggle" aria-label="Search">⌕</button>
+      <button class="icon-btn" aria-label="Account">◯</button>
+      <button class="bag icon-btn" aria-label="Shopping bag">Bag <b>0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">The autumn collection / 2025</p><h1>Pieces for<br><em>the in-between.</em></h1><p>Considered essentials made to move with your life.</p><a class="button light" href="#shop">Shop the collection <span>→</span></a></div>
+      <div class="hero-image"><img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1400&q=85" alt="Woman in an autumn outfit"></div>
+      <div class="hero-note">01 / 03 &nbsp; <span></span></div>
+    </section>
+
+    <section class="benefits"><div><span>✦</span> Thoughtfully made</div><div><span>↗</span> Carbon neutral shipping</div><div><span>♡</span> 30 day easy returns</div><div><span>◎</span> Small batch production</div></section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-title"><div><p class="eyebrow">Curated for you</p><h2>Shop the latest</h2></div><a href="#products">View all <span>→</span></a></div>
+      <div class="quick-categories">
+        <button class="category active" data-category="All">All pieces</button><button class="category" data-category="Tops">Tops</button><button class="category" data-category="Knitwear">Knitwear</button><button class="category" data-category="Bottoms">Bottoms</button><button class="category" data-category="Accessories">Accessories</button>
+      </div>
+      <div class="catalog-layout" id="products">
+        <aside class="filters">
+          <div class="filter-head"><strong>Filter</strong><button id="clearFilters">Clear all</button></div>
+          <details open><summary>Category <span>+</span></summary><label><input type="checkbox" value="Tops"> Tops</label><label><input type="checkbox" value="Knitwear"> Knitwear</label><label><input type="checkbox" value="Bottoms"> Bottoms</label><label><input type="checkbox" value="Accessories"> Accessories</label></details>
+          <details open><summary>Size <span>+</span></summary><div class="sizes"><button>XS</button><button>S</button><button>M</button><button>L</button><button>XL</button></div></details>
+          <details open><summary>Color <span>+</span></summary><div class="swatches"><button class="cream"></button><button class="black"></button><button class="rust"></button><button class="olive"></button><button class="blue"></button></div></details>
+          <details open><summary>Price <span>+</span></summary><input id="priceRange" type="range" min="40" max="250" value="250"><div class="price-label">$40 <span>Up to $<b id="priceValue">250</b></span></div></details>
+        </aside>
+        <div class="products-area"><div class="product-bar"><span id="resultCount">8 pieces</span><label>Sort by <select id="sort"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rating">Top rated</option></select></label></div><div class="product-grid" id="productGrid"></div></div>
+      </div>
+    </section>
+
+    <section class="editorial" id="edit"><div class="editorial-img"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=85" alt="Editorial fashion portrait"></div><div class="editorial-copy"><p class="eyebrow">The seora journal</p><h2>Good things<br>take <em>time.</em></h2><p>Meet the makers and materials behind the pieces you reach for, season after season.</p><a href="#">Read our story <span>→</span></a></div></section>
+
+    <section class="suggestions"><div class="section-title"><div><p class="eyebrow">Made for your wardrobe</p><h2>You may also like</h2></div><div class="arrows"><button>←</button><button>→</button></div></div><div class="suggestion-grid" id="suggestionGrid"></div></section>
+    <section class="newsletter"><p class="eyebrow">A note from us, occasionally</p><h2>Good mail only.</h2><p>New pieces, studio notes, and 10% off your first order.</p><form><input type="email" placeholder="Your email address" required><button aria-label="Subscribe">→</button></form><small>By subscribing, you agree to our privacy policy.</small></section>
+  </main>
+  <footer><a class="logo" href="#">SEORA<span>®</span></a><div><strong>Customer care</strong><a href="#">Shipping & returns</a><a href="#">Size guide</a><a href="#">Contact</a></div><div><strong>About Seora</strong><a href="#">Our story</a><a href="#">Materials</a><a href="#">Journal</a></div><div><strong>Follow along</strong><a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">TikTok</a></div><p>© 2025 Seora Studio</p></footer>
+
+  <div class="search-overlay" id="searchOverlay"><button class="close-search" aria-label="Close search">×</button><div class="search-panel"><p class="eyebrow">Find your next favourite</p><div class="search-input"><span>⌕</span><input id="searchInput" autofocus placeholder="Search products, categories..." autocomplete="off"></div><div id="searchResults"><p class="search-hint">Try “knitwear”, “trousers”, or “scarf”</p></div></div></div>
+  <div class="toast" id="toast">Added to bag <span>→</span></div>
+
+  <div class="drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-close-cart></div>
+    <section class="drawer-panel"><div class="drawer-header"><h2>Your bag <span id="cartItemsCount">(0)</span></h2><button data-close-cart aria-label="Close bag">×</button></div><div id="cartItems" class="cart-items"><p class="empty-cart">Your bag is waiting for something beautiful.</p></div><div class="cart-summary"><label class="coupon-row"><input id="couponCode" placeholder="Gift card or promo code"><button id="applyCoupon">Apply</button></label><p id="couponMessage"></p><div><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div><div><span>Shipping</span><span id="shippingCost">Calculated at checkout</span></div><div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div><button class="checkout-button" id="checkoutButton">Secure checkout →</button></div></section>
+  </div>
+
+  <div class="modal" id="productModal" aria-hidden="true"><div class="modal-backdrop" data-close-product></div><section class="product-modal-panel"><button class="modal-close" data-close-product>×</button><div id="productModalContent"></div></section></div>
+  <div class="modal" id="checkoutModal" aria-hidden="true"><div class="modal-backdrop" data-close-checkout></div><section class="checkout-panel"><button class="modal-close" data-close-checkout>×</button><p class="eyebrow">Secure checkout</p><h2>Almost yours.</h2><div class="checkout-steps"><span class="active">1. Details</span><span>2. Delivery</span><span>3. Pay</span></div><form id="checkoutForm"><div class="form-grid"><label>Email<input required type="email" placeholder="you@example.com"></label><label>Full name<input required placeholder="Your name"></label></div><label>Address<input required placeholder="123 Main Street"></label><div class="form-grid"><label>City<input required placeholder="New York"></label><label>Postal code<input required placeholder="10001"></label></div><label>Card number<input required inputmode="numeric" placeholder="4242 4242 4242 4242"></label><button class="checkout-button" type="submit">Place order <span id="checkoutPrice"></span></button></form></section></div>
+  <div class="modal" id="accountModal" aria-hidden="true"><div class="modal-backdrop" data-close-account></div><section class="account-panel"><button class="modal-close" data-close-account>×</button><p class="eyebrow">Your Seora</p><h2>Welcome back.</h2><div class="account-tabs"><button class="active">Sign in</button><button>Create account</button></div><form><label>Email<input type="email" placeholder="you@example.com"></label><label>Password<input type="password" placeholder="••••••••"></label><button class="checkout-button" type="button">Continue →</button></form><div class="account-orders"><strong>Recent orders</strong><p>Sign in to see your purchases, saved items, and delivery updates.</p></div></section></div>
+  <script src="app.js"></script>
+</body>
+</html>
