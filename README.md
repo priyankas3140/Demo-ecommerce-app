@@ -8,6 +8,14 @@ The interface is designed around an editorial retail aesthetic: an announcement 
 
 Open the deployed storefront: **[priyankas3140.github.io/Demo-ecommerce-app](https://priyankas3140.github.io/Demo-ecommerce-app/)**
 
+Open the product-development workspace: **[NPD Hub](https://priyankas3140.github.io/Demo-ecommerce-app/npd.html)**
+
+## NPD Hub
+
+The project also includes an NPD (New Product Development) workspace for managing products before they reach the store. It has a product-idea portfolio, research library, development roadmap, launch-readiness centre, and quick metrics dashboard.
+
+Its data is stored in **IndexedDB**, the browser's built-in database. New product concepts, research findings, and roadmap tasks remain saved on the device after refresh, without requiring a server or account.
+
 ## What you can do
 
 ### Discover products
